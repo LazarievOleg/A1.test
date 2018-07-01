@@ -4,7 +4,7 @@ require('chai').should();
 
 var assert = require('chai').assert
 
-describe('Rent the appartment', () => {
+describe('Search the appartment', () => {
 
     it('Open site', () => {
         SearchAppartment.open()
