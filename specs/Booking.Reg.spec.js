@@ -4,7 +4,7 @@ require('chai').should();
 
 var assert = require('chai').assert
 
-describe('PositiveTestRegistrationForm', () => {
+describe('PositiveTestRegistration', () => {
 
 	it('Open site', () => {
 		RegistrationPage.open()
@@ -16,7 +16,7 @@ describe('PositiveTestRegistrationForm', () => {
 		browser.element('div[aria-label="Зарегистрироваться"]').should.exist
 	})
 
-	it('Positive process of registration and signout', () => {
+	it('Positive registration and signout', () => {
 		RegistrationPage.emailInput.setValue('9jockoussama.jos@1.emailfake.ml')
 		RegistrationPage.passwordInput.setValue('111222333')	
 		RegistrationPage.submitButton.click()
