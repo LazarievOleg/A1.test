@@ -21,7 +21,7 @@ describe('PositiveTestRegistration', () => {
 		RegistrationPage.passwordInput.setValue('111222333')	
 		RegistrationPage.submitButton.click()
 		
-			browser.waitForExist('#wl252-modal-name', 7000);
+			browser.waitForExist('#wl252-modal-name');
 		
 			browser.isExisting('.modal-wrapper .wl252-modal__skip')
 			browser.click('.modal-wrapper .wl252-modal__skip')
@@ -30,6 +30,7 @@ describe('PositiveTestRegistration', () => {
 		    browser.element('span[header_name="Ваш аккаунт"] .user_firstname .ge-no-yellow-bg').should.exist
 			browser.click('.header-user-menu-link-s-logged-in')
 			browser.click('form.profile-menu__item--signout')
+			
 	})
 
 })

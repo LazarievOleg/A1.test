@@ -10,9 +10,9 @@ class RegistrationPage extends Page {
 	openModal() {
 		browser.click('li.uc_account-center-item a.signin_cta.profile_menu_trigger')
 	}
-	register(){
-		this.submitButton.click()
-	}
+	//register(){
+		//this.submitButton.click()
+	//}
 }
 
 export default new RegistrationPage()
