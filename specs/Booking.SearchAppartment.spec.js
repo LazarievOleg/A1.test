@@ -17,10 +17,19 @@ describe('Search the appartment', () => {
        SearchAppartment.NameApp.setValue('Hotel Pennsylvania')
        browser.click('.sb-searchbox__button')
        browser.element('#hotel_1803065').should.exist
+       console.log(browser.getCurrentTabId())
+       browser.getTitle()
        browser.element('span.sr-hotel__name*=Hotel Pennsylvania').element("..").click();
-       browser.pause(10000)
-       //browser.element('button.b-button .b-button_primary .book_now_button_handler').should.exist
-     
+      browser.getTitle()
+      browser.pause(15000)
+       console.log(browser.getCurrentTabId())
+       var t = browser.getUrl();
+       
+       browser.newWindow(t);
+       browser.click('#right #top-book .b-button_primary')
+       browser.getTitle()
+       console.log(browser.getCurrentTabId())
+       browser.pause(15000)
        
  })
     
