@@ -6,11 +6,10 @@ var assert = require('chai').assert
 
 describe('Search the appartment', () => {
 	
-    it('Open site', () => {
+   it('Open site', () => {
         SearchAppartment.open()
-        browser.element('#logo_no_globe_new_logo').should.exist
+        SearchAppartment.verifyOnPage()
     })
-
     it('Search "Hotel Pennsylvania"', () =>{
 
        browser.element('.c-autocomplete__input .sb-searchbox__input .sb-destination__input').should.exist
