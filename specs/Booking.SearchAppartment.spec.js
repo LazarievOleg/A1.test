@@ -1,39 +1,40 @@
 import SearchAppartment from '../pageobjects/Booking/search.appartment'
 
-require('chai').should();
-var assert = require('chai').assert
+
+before(() => {
+  SearchAppartment.open()
+  SearchAppartment.verifyOnPage()
+})
 
 describe('Search the appartment', () => {
-    it('Open site', () => {
-        SearchAppartment.open()
-        SearchAppartment.verifyOnPage()
-    })
 
-    it('Search "Hotel Pennsylvania"', () =>{
+    it('Search hotel', () =>{
+      SearchAppartment.search('Hotel Pennsylvania')
+      SearchAppartment.checkResult('#hotel_56423')
+    });
 
-      // browser.element('.c-autocomplete__input .sb-searchbox__input .sb-destination__input').should.exist
-      SearchAppartment.nameApp.setValue('Hotel Pennsylvania')
-      browser.click('.sb-searchbox__button')
-      // browser.element('#hotel_1803065').should.exist
-      console.log(browser.getCurrentTabId())
-      browser.getTitle()
-      SearchAppartment.clickHotelName()
-      console.log(browser.windowHandle());
-      browser.getTitle()
-      browser.pause(15000)
-      console.log(browser.getCurrentTabId())
+    it ('Select hotel', () => {
+      SearchAppartment.selectHotel('#hotel_56423')
+      SearchAppartment.checkNewTab()
+    }) 
 
-      var t = browser.getUrl();
-      browser.newWindow(t);
+    // it ('Click on Buy Button', () => {
+    //   console.log(browser.windowHandles())
+    //   console.log(browser.getCurrentTabId())
+    //  // var t = browser.getUrl();
 
-       //browser.click('#right #top-book .b-button_primary')
-      SearchAppartment.clickBuyButton()
-      browser.getTitle()
-      console.log(browser.getCurrentTabId())
-      console.log(browser.windowHandle());
-      browser.pause(15000)
-       
+    //  browser.switchTab(browser.windowHandles().value[1]);
+    //   console.log(browser.getCurrentTabId())
+    //  //  browser.newWindow(t);
+    //   SearchAppartment.buyButton.click()
+    //   browser.getTitle()
+    //   console.log(browser.getCurrentTabId())
+    //   console.log(browser.windowHandle());
+    //   SearchAppartment.pausePage(10000)
+
+    // })
+
  })
     
-})  
+
 
