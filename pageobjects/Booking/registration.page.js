@@ -14,7 +14,7 @@ class RegistrationPage extends Page {
 
 	verifyOnPage() {
 		
-		expect(browser.element('#logo_no_globe_new_logo').isVisible(), 'лого сайта на месте').to.be.true;
+		expect(browser.element('#logo_no_globe_new_logo').isVisible(), 'лого на месте').to.be.true;
 	}
 
 }
