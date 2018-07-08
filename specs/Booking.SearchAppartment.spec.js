@@ -1,4 +1,5 @@
 import SearchAppartment from "../pageobjects/Booking/search.appartment";
+/*global browser*/
 
 
 before(() => {

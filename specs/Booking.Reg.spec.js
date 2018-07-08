@@ -2,7 +2,7 @@ import RegistrationPage from "../pageobjects/Booking/registration.page";
 
 require("chai").should();
 
-//var assert = require("chai").assert;
+/*global browser*/
 
 before(() => {
 	RegistrationPage.open();

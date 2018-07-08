@@ -1,5 +1,7 @@
 import Page from "../page";
 
+/*global browser*/
+
 require("chai").should();
 
 class SearchAppartment extends Page {
