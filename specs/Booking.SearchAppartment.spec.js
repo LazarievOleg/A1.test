@@ -18,21 +18,19 @@ describe('Search the appartment', () => {
       SearchAppartment.checkNewTab()
     }) 
 
-    // it ('Click on Buy Button', () => {
-    //   console.log(browser.windowHandles())
-    //   console.log(browser.getCurrentTabId())
-    //  // var t = browser.getUrl();
+    it.skip ('Click on Buy Button', () => {
+      console.log(browser.windowHandles())
+      console.log(browser.getCurrentTabId())
 
-    //  browser.switchTab(browser.windowHandles().value[1]);
-    //   console.log(browser.getCurrentTabId())
-    //  //  browser.newWindow(t);
-    //   SearchAppartment.buyButton.click()
-    //   browser.getTitle()
-    //   console.log(browser.getCurrentTabId())
-    //   console.log(browser.windowHandle());
-    //   SearchAppartment.pausePage(10000)
+     browser.switchTab(browser.windowHandles().value[1]);
+      console.log(browser.getCurrentTabId())
+      SearchAppartment.buyButton.click()
+      browser.getTitle()
+      console.log(browser.getCurrentTabId())
+      console.log(browser.windowHandle());
+      SearchAppartment.pausePage(10000)
 
-    // })
+    })
 
  })
     

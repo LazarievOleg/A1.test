@@ -5,7 +5,7 @@ require('chai').should();
 class SearchAppartment extends Page {
 	get searchInput    () {return browser.element('#ss');}
 	get searchButton () {return browser.element ('.sb-searchbox__button')}
-	// get buyButton () {return browser.element ('#right #top-book .b-button_primary')}
+	
 
 	verifyOnPage() {
 		let logoHref = browser.element('#logo_no_globe_new_logo').getAttribute('src');
@@ -26,7 +26,7 @@ class SearchAppartment extends Page {
 	}
 
 	selectHotel(elementId) {
-		//hide calendar if exist c2-wrapper-s-hidden
+		
 		let calendarDiv = browser.element('.sb-date-field__wrapper .c2-wrapper');
 		if(!calendarDiv.getAttribute('class').includes('c2-wrapper-s-hidden')) {
 			calendarDiv.element('.sb-searchbox__input').click()
@@ -40,9 +40,9 @@ class SearchAppartment extends Page {
      handles[0].should.equal(browser.getCurrentTabId())
 	}
 
-	// pausePage(milliseconds) {
-	//     browser.pause(milliseconds)
-	// }
+	pausePage(milliseconds) {
+	    browser.pause(milliseconds)
+	}
 }
 
 export default new SearchAppartment()
