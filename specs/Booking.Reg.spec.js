@@ -4,16 +4,20 @@ require('chai').should();
 
 var assert = require('chai').assert
 
-describe.skip('PositiveTestRegistration', () => {
+before(() => {
+  RegistrationPage.open()
+  RegistrationPage.verifyOnPage()
+})
+
+describe('PositiveTestRegistration', () => {
 
 	it('Open site', () => {
-		RegistrationPage.open()
-		browser.element('#logo_no_globe_new_logo').should.exist
+		RegistrationPage.verifyOnPage()
 	})
 
 	it('Modal window open',() =>{
 		RegistrationPage.openModal()
-		browser.element('div[aria-label="Зарегистрироваться"]').should.exist
+		
 	})
 
 	it('Positive registration and signout', () => {

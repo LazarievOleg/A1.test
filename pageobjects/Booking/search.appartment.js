@@ -18,7 +18,7 @@ class SearchAppartment extends Page {
 	}
 
 	checkResult(elementId) {
-		browser.element(elementId).should.exist;
+		browser.element(elementId).isVisible().should.be.true;
 	}
 
 	open() {

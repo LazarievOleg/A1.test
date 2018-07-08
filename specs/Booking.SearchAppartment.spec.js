@@ -24,6 +24,7 @@ describe('Search the appartment', () => {
 
      browser.switchTab(browser.windowHandles().value[1]);
       console.log(browser.getCurrentTabId())
+      
       SearchAppartment.buyButton.click()
       browser.getTitle()
       console.log(browser.getCurrentTabId())

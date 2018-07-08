@@ -10,9 +10,13 @@ class RegistrationPage extends Page {
 	openModal() {
 		browser.click('li.uc_account-center-item a.signin_cta.profile_menu_trigger')
 	}
-	//register(){
-		//this.submitButton.click()
-	//}
+
+
+	verifyOnPage() {
+		
+		expect(browser.element('#logo_no_globe_new_logo').isVisible(), 'лого сайта на месте').to.be.true;
+	}
+
 }
 
 export default new RegistrationPage()
