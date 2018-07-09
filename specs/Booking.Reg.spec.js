@@ -9,7 +9,7 @@ before(() => {
 	RegistrationPage.verifyOnPage();
 });
 
-describe("PositiveTestRegistration", () => {
+describe.skip("PositiveTestRegistration", () => {
 
 	it("Open site", () => {
 		RegistrationPage.verifyOnPage();
