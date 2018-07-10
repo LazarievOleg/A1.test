@@ -7,7 +7,7 @@ before(() => {
 	SearchAppartment.verifyOnPage();
 });
 
-describe("Search the appartment", () => {
+describe.skip("Search the appartment", () => {
 
 	it("Search hotel", () =>{
 		SearchAppartment.search("Hotel Pennsylvania");

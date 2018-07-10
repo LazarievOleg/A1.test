@@ -9,7 +9,7 @@ before(() => {
 	RegistrationPage.verifyOnPage();
 });
 
-describe("PositiveTestRegistration", () => {
+describe.skip("PositiveTestRegistration", () => {
 
 	it("Open site", () => {
 		RegistrationPage.verifyOnPage();
@@ -24,9 +24,7 @@ describe("PositiveTestRegistration", () => {
 		RegistrationPage.emailInput.setValue("9jockoussama.jos@1.emailfake.ml");
 		RegistrationPage.passwordInput.setValue("111222333");	
 		RegistrationPage.submitButton.click();
-		
 		browser.waitForExist("#wl252-modal-name");
-		
 		browser.isExisting(".modal-wrapper .wl252-modal__skip");
 		browser.click(".modal-wrapper .wl252-modal__skip");
 		browser.click(".modal-wrapper .wl252-modal__skip");
