@@ -7,7 +7,7 @@ require("chai").should();
 
 class SearchCity extends Page {
 	get searchInput    () {return browser.element("#ss");}
-	get searchButton () {return browser.element (".sb-searchbox__button");}
+	get searchButton () {return browser.element(".sb-searchbox__button");}
 
 	verifyOnPage() {
 		let logoHref = browser.element("#logo_no_globe_new_logo").getAttribute("src");
@@ -18,6 +18,14 @@ class SearchCity extends Page {
 		this.searchInput.setValue(cityName);
 		this.searchButton.click();
 	}
+
+	equalArray () {
+		let allAddresses = $$(".address");
+		let addressesTexts = allAddresses.map(element => element.getText());
+		let searchResult = addressesTexts.filter(text => text.includes("New York"));
+		addressesTexts.length.should.equal(searchResult.length);
+	}
+
 
 	open() {
 		super.open("/");	

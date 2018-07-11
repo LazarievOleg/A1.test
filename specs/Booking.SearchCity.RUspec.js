@@ -8,14 +8,16 @@ before(() => {
 });
 
 
-describe("Check all search results contain New York", () => {
+describe.skip("Check all search results contain New York RU VERSION", () => {
 
+	
 	it("Search the city", () =>{
+	
 		SearchCity.search("New York");
 	
 	});
 
-	it("Check if equal ", ()=>{
+	it("Check if equal on RU VERSION", ()=>{
 
 		let allAddresses = $$(".address");
 		let addressesTexts = allAddresses.map(element => element.getText());

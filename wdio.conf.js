@@ -14,6 +14,7 @@ exports.config = {
 	],
 	// Patterns to exclude.
 	exclude: [
+		
 		// 'path/to/excluded/files'
 	],
 	//
@@ -44,7 +45,14 @@ exports.config = {
 		// 5 instances get started at a time.
 		maxInstances: 5,
 		//
-		browserName: "chrome"
+		browserName: "chrome",
+		
+		chromeOptions: {
+			args: ["headless", 
+				"disable-gpu", 
+				"window-size=500,500"]
+		}
+
 	}],
 	//
 	// ===================
