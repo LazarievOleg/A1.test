@@ -2,13 +2,13 @@ import SearchAppartment from "../pageobjects/Booking/search.appartment";
 /*global browser*/
 
 
-before(() => {
-	SearchAppartment.open();
-	SearchAppartment.verifyOnPage();
-});
+describe.skip("Search the appartment", () => {
 
-describe("Search the appartment", () => {
-
+	before(() => {
+		SearchAppartment.open();
+		SearchAppartment.verifyOnPage();
+	});
+	
 	it("Search hotel", () =>{
 		browser.pause(1000);// Добавлена пауза, поскольку без нее wdio кликает на другой элемент. Видимо, не успевает отреспонсить елементы под указанное разрешение.
 		SearchAppartment.search("Hotel Pennsylvania");

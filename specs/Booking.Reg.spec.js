@@ -4,12 +4,12 @@
 
 // /*global browser*/
 
+// describe.skip("PositiveTestRegistration", () => {
+
 // // before(() => {
 // // 	RegistrationPage.open();
 // // 	RegistrationPage.verifyOnPage();
 // // });
-
-// describe.skip("PositiveTestRegistration", () => {
 
 // 	it("Open site", () => {
 // 		RegistrationPage.verifyOnPage();

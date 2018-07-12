@@ -2,15 +2,13 @@ import SearchCity from "../pageobjects/Booking/search.city";
 
 require("chai").should();
 
-before(() => {
-	SearchCity.open();
-	SearchCity.verifyOnPage();
-});
-
-
 describe.skip("Check all search results contain New York RU VERSION", () => {
 
-	
+	before(() => {
+		SearchCity.open();
+		SearchCity.verifyOnPage();
+	});
+
 	it("Search the city", () =>{
 	
 		SearchCity.search("New York");

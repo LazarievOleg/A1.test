@@ -26,6 +26,17 @@ class SearchCity extends Page {
 		addressesTexts.length.should.equal(searchResult.length);
 	}
 
+	selectDate (stringDate){
+		let selectingDate = new Date(stringDate);
+		let time = selectingDate.getTime();
+		console.log(time);
+		browser.execute( () => document.querySelector(`[data-id="${time}"]`).click());
+		//browser.execute( () => document.querySelector(`[data-id=\" + time + \"]`).click());
+	//	1539129600000
+
+	}
+
+
 
 	open() {
 		super.open("/");	
