@@ -30,13 +30,17 @@ class SearchCity extends Page {
 		let selectingDate = new Date(stringDate);
 		let time = selectingDate.getTime();
 		console.log(time);
-		browser.execute( () => document.querySelector(`[data-id="${time}"]`).click());
-		//browser.execute( () => document.querySelector(`[data-id=\" + time + \"]`).click());
-	//	1539129600000
-
+		browser.execute( (time) => document.querySelector(`[data-id="${time}"]`).click(), time);
 	}
 
+	etFunc(hhh){
+		console.log(hhh);
+	}
 
+	etSecFunc(uuu, iii){
+		uuu(iii);
+	}
+	
 
 	open() {
 		super.open("/");	
