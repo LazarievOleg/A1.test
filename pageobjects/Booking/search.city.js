@@ -33,15 +33,6 @@ class SearchCity extends Page {
 		browser.execute( (time) => document.querySelector(`[data-id="${time}"]`).click(), time);
 	}
 
-	etFunc(hhh){
-		console.log(hhh);
-	}
-
-	etSecFunc(uuu, iii){
-		uuu(iii);
-	}
-	
-
 	open() {
 		super.open("/");	
 	}
