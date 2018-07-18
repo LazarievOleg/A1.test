@@ -6,7 +6,7 @@ require("chai").should();
 
 
 class SearchCity extends Page {
-	get searchInput    () {return browser.element("#ss");}
+	get searchInput  () {return browser.element("#ss");}
 	get searchButton () {return browser.element(".sb-searchbox__button");}
 
 	verifyOnPage() {
@@ -19,17 +19,26 @@ class SearchCity extends Page {
 		this.searchButton.click();
 	}
 
-	equalArray () {
+	checkEqual (city){
+		let t = $("#ss");
+		let eqName = t.getValue();
+		eqName.should.be.equal(`${city}`);
+		
+		let tt = browser.getText(".sb-date-field__display");
+		tt[0].should.be.equal("Wednesday 10 October 2018");
+		tt[1].should.be.equal("Thursday 11 October 2018");
+	}
+
+	equalArray (city) {
 		let allAddresses = $$(".address");
 		let addressesTexts = allAddresses.map(element => element.getText());
-		let searchResult = addressesTexts.filter(text => text.includes("New York"));
+		let searchResult = addressesTexts.filter(text => text.includes(`${city}`));
 		addressesTexts.length.should.equal(searchResult.length);
 	}
 
 	selectDate (stringDate){
 		let selectingDate = new Date(stringDate);
 		let time = selectingDate.getTime();
-		console.log(time);
 		browser.execute( (time) => document.querySelector(`[data-id="${time}"]`).click(), time);
 	}
 
