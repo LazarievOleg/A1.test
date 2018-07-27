@@ -25,13 +25,18 @@ require("chai").should();
 
 		SearchCity.selectDate("Oct 10 2018 UTC");
 			
+	});
+
+	it("Make screenshots of hotel images" , () =>{
+
 		SearchCity.makeScreenshots();
+		
 	});
 
 	it("Check the quantity of objects on result page", ()=>{
 
 		SearchCity.equalArray (data.city);
-		
+	
 	});
 
 	it("Check the dates and city in destination form", () => {
