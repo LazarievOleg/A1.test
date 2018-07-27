@@ -1,38 +1,45 @@
 import SearchCity from "../pageobjects/Booking/search.city";
+import searchCity from "../pageobjects/Booking/search.city";
 
 require("chai").should();
 
-["Нью-Йорк", "New York"].forEach(
-	city => describe(`Check all search results contain ${city}`, () => {
+[
+	{ city: "Нью-Йорк", locale: "index.ru.html", checkInDate:("среда, 10 октября 2018"), checkOutDate:("четверг, 11 октября 2018") },
+	{ city: "New York", locale: "index.en-gb.html", checkInDate: "Wednesday 10 October 2018", checkOutDate:("Thursday 11 October 2018")}
+].forEach(data =>  describe(`Check all search results contain ${data.city}`, () =>{
 
-		before(() => {
-			SearchCity.open();
-			SearchCity.verifyOnPage();
 
-		});
+	before(() => {
+		SearchCity.open(data.locale);
+		SearchCity.verifyOnPage();
 
-		it(`Search the city ${city}`, () =>{
+	});
+
+	it(`Search the city ${data.city}`, () =>{
 		
-			SearchCity.search(city);
+		SearchCity.search(data.city);
 			
-		});
+	});
 
-		it("Select October 10-11", () =>{
+	it("Select October 10-11", () =>{
 
-			SearchCity.selectDate("Oct 10 2018 UTC");
+		SearchCity.selectDate("Oct 10 2018 UTC");
+			
+		SearchCity.makeScreenshots();
+	});
 
-		});
+	it("Check the quantity of objects on result page", ()=>{
 
-		it ("Check the equality of objects on result page", ()=>{
-
-			SearchCity.equalArray (`${city}`);
+		SearchCity.equalArray (data.city);
 		
-		});
+	});
 
-		it("Check the dates and city in destination form", () => {
+	it("Check the dates and city in destination form", () => {
 
-			SearchCity.checkEqual(`${city}`);
-
-		});
-	})
+		SearchCity.checkEqual(data.city);
+		SearchCity.checkInDate(data.checkInDate);
+		searchCity.checkOutDate(data.checkOutDate);
+			
+	});
+})
 );

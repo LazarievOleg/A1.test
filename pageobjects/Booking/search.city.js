@@ -1,6 +1,8 @@
 import Page from "../page";
 
 /*global browser*/
+/*global $$*/
+/*global $*/
 
 require("chai").should();
 
@@ -20,14 +22,22 @@ class SearchCity extends Page {
 	}
 
 	checkEqual (city){
-		let t = $("#ss");
-		let eqName = t.getValue();
-		eqName.should.be.equal(`${city}`);
-		
-		let tt = browser.getText(".sb-date-field__display");
-		tt[0].should.be.equal("Wednesday 10 October 2018");
-		tt[1].should.be.equal("Thursday 11 October 2018");
+		let searchInput = $("#ss");
+		let eqName = searchInput.getValue();
+		eqName.should.be.equal(city);
 	}
+
+	checkInDate(checkInDate){
+		let dateField = browser.getText(".sb-date-field__display");
+		console.log(dateField);
+		dateField[0].should.be.equal(checkInDate);
+	}	
+
+	checkOutDate(checkOutDate){
+		let dateField = browser.getText(".sb-date-field__display");
+		console.log(dateField);
+		dateField[1].should.be.equal(checkOutDate);
+	}	
 
 	equalArray (city) {
 		let allAddresses = $$(".address");
@@ -42,8 +52,17 @@ class SearchCity extends Page {
 		browser.execute( (time) => document.querySelector(`[data-id="${time}"]`).click(), time);
 	}
 
-	open() {
-		super.open("/");	
+	makeScreenshots(){
+		let images =$$(".sr_item_photo");
+			
+		images.forEach(image => {
+			let id = image.getAttribute("id");
+			browser.saveElementScreenshot(`screenshots/${id}.png`, `#${id} img`, {hide :[".ribbon__extra"]});	
+		});
+	}
+
+	open(locale="") {
+		super.open(`/${locale}`);	
 	}
 }
 

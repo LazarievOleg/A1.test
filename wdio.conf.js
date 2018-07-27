@@ -48,7 +48,7 @@ exports.config = {
 		browserName: "chrome",
 		
 		chromeOptions: {
-			args: ["headless", 
+			args: [//"headless", 
 				"disable-gpu", 
 				"window-size=1024,768"]
 		}
@@ -79,7 +79,7 @@ exports.config = {
 	bail: 0,
 	//
 	// Saves a screenshot to a given path if a command fails.
-	screenshotPath: "./screenshots",
+	screenshotPath: "./errorshots",
 	//
 	// Set a base URL in order to shorten url command calls. If your `url` parameter starts
 	// with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -104,22 +104,25 @@ exports.config = {
 	// WebdriverCSS: https://github.com/webdriverio/webdrivercss
 	// WebdriverRTC: https://github.com/webdriverio/webdriverrtc
 	// Browserevent: https://github.com/webdriverio/browserevent
-	// plugins: {
-	//     webdrivercss: {
-	//         screenshotRoot: 'my-shots',
-	//         failedComparisonsRoot: 'diffs',
-	//         misMatchTolerance: 0.05,
-	//         screenWidth: [320,480,640,1024]
-	//     },
-	//     webdriverrtc: {},
-	//     browserevent: {}
+	plugins: {
+		"wdio-screenshot": {}
+	// webdrivercss: {
+	//    screenshotRoot: 'my-shots',
+	//   failedComparisonsRoot: 'diffs',
+	//   misMatchTolerance: 0.05,
+	//  screenWidth: [320,480,640,1024]
 	// },
+	//  webdriverrtc: {},
+	// browserevent: {}
+	},
 	//
 	// Test runner services
 	// Services take over a specific job you don't want to take care of. They enhance
 	// your test setup with almost no effort. Unlike plugins, they don't add new
 	// commands. Instead, they hook themselves up into the test process.
-	services: ["selenium-standalone"],
+	services: ["selenium-standalone",
+	//	"visual-regression"
+	],
 	//
 	// Framework you want to run your specs with.
 	// The following are supported: Mocha, Jasmine, and Cucumber
