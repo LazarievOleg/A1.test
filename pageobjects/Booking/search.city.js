@@ -57,7 +57,7 @@ class SearchCity extends Page {
 			
 		images.forEach(image => {
 			let id = image.getAttribute("id");
-			browser.saveElementScreenshot(`screenshots/${id}.png`, `#${id} img`, {hide :[".ribbon__extra"]});	
+			browser.saveElementScreenshot(`screenshots/${id}.png`, `#${id} img`, {remove :[".ribbon__extra"]});	
 		});
 	}
 
