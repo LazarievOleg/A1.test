@@ -181,6 +181,7 @@ exports.config = {
 		var chai = require("chai");
 		global.expect = chai.expect;
 		chai.Should();
+		/*eslint linebreak-style: ["error", "windows"]*/
 	},
 	/**
      * Runs before a WebdriverIO command gets executed.
