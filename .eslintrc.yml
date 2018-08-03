@@ -12,8 +12,6 @@ rules:
     - error
     - tab
   linebreak-style: 0
-    # - error
-    # - windows
   quotes:
     - error
     - double

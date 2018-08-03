@@ -1,5 +1,4 @@
-/*eslint linebreak-style: ["error", "windows"]*/
-exports.config = {
+export const config = {
     
 	//
 	// ==================
