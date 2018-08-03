@@ -1,0 +1,1 @@
+  [![Build Status](https://travis-ci.org/Fl0ydR0se/A1.test.svg?branch=master)](https://travis-ci.org/Fl0ydR0se/A1.test)
