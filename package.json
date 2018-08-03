@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Booking.com",
   "scripts": {
+    "lint": "eslint .",
     "test": "wdio wdio.conf.js"
   },
   "author": "Lazariev Oleg",

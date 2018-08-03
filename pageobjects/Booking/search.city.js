@@ -29,13 +29,11 @@ class SearchCity extends Page {
 
 	checkInDate(checkInDate){
 		let dateField = browser.getText(".sb-date-field__display");
-		console.log(dateField);
 		dateField[0].should.be.equal(checkInDate);
 	}	
 
 	checkOutDate(checkOutDate){
 		let dateField = browser.getText(".sb-date-field__display");
-		console.log(dateField);
 		dateField[1].should.be.equal(checkOutDate);
 	}	
 
