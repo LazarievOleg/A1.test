@@ -3,3 +3,4 @@ screenshots
 errorshots
 logs
 .idea
+wdio.conf.js
