@@ -4,3 +4,4 @@ errorshots
 logs
 .idea
 wdio.conf.js
+wdio.mobile.conf.js
