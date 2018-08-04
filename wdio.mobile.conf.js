@@ -53,7 +53,6 @@ exports.config = {
 			args: [//"headless", 
 			// 	"disable-gpu", 
 			// 	"window-size=1024,768"]
-			//'--user-agent=' + myUserAgent
 			]}
 
 	}],
