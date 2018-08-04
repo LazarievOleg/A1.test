@@ -11,7 +11,7 @@ exports.config = {
 	// directory is where your package.json resides, so `wdio` will be called from there.
 	//s
 	specs: [
-		"./specs/*spec.js"
+		"./specs/Booking.Mobile.js"
 	],
 	// Patterns to exclude.
 	exclude: [
@@ -49,7 +49,7 @@ exports.config = {
 		browserName: "chrome",
 		
 		chromeOptions: {
-			mobileEmulation: {'deviceName': 'iPhone X'},
+			mobileEmulation: {"deviceName": "iPhone X"},
 			args: [//"headless", 
 			// 	"disable-gpu", 
 			// 	"window-size=1024,768"]
@@ -185,7 +185,6 @@ exports.config = {
 		global.expect = chai.expect;
 		chai.Should();
 		/*eslint linebreak-style: ["error", "windows"]*/
-		/*global browser*/
 	},
 	/**
      * Runs before a WebdriverIO command gets executed.

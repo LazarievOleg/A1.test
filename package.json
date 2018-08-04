@@ -4,7 +4,8 @@
   "description": "Booking.com",
   "scripts": {
     "lint": "eslint .",
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "mobile": "wdio wdio.mobile.conf.js"
   },
   "author": "Lazariev Oleg",
   "license": "ISC",
