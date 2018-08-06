@@ -22,7 +22,7 @@ require("chai").should();
 	});
 
 	it("Make screenshots of hotel images" , () =>{
-		SearchCity.makeScreenshots();
+		SearchCity.makeScreenshots(); // for no-headless only
 	});
 
 	it("Check the quantity of objects on result page", ()=>{
