@@ -5,10 +5,7 @@ require("chai").should();
 describe("Check mobile version open", () => {
 
 	it("Verify mobile logo ", () => {
-		
-		Checkmobile.open();
-		
+		Checkmobile.open("/");
 		Checkmobile.verifyOnPage();
-		
 	});
 });

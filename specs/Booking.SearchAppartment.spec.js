@@ -1,10 +1,10 @@
 import SearchAppartment from "../pageobjects/Booking/search.appartment";
 /*global browser*/
 
-describe.skip("Search the appartment", () => {
+describe("Search the appartment", () => {
 
 	before(() => {
-		SearchAppartment.open();
+		SearchAppartment.open("/");
 		SearchAppartment.verifyOnPage();
 	});
 	
@@ -21,18 +21,14 @@ describe.skip("Search the appartment", () => {
 	it.skip ("Click on Buy Button", () => {
 		console.log(browser.windowHandles());
 		console.log(browser.getCurrentTabId());
-
 		browser.switchTab(browser.windowHandles().value[1]);
 		console.log(browser.getCurrentTabId());
-      
 		SearchAppartment.buyButton.click();
 		browser.getTitle();
 		console.log(browser.getCurrentTabId());
 		console.log(browser.windowHandle());
 		SearchAppartment.pausePage(10000);
-
 	});
-
 });
     
 

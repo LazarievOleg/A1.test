@@ -1,24 +1,16 @@
 import Page from "../page";
-
+import SearchForm from "../searchform";
 /*global browser*/
 /*global $$*/
 /*global $*/
 
 require("chai").should();
 
-
 class SearchCity extends Page {
-	get searchInput  () {return browser.element("#ss");}
-	get searchButton () {return browser.element(".sb-searchbox__button");}
-
-	verifyOnPage() {
-		let logoHref = browser.element("#logo_no_globe_new_logo").getAttribute("src");
-		logoHref.should.include("booking_logo_retina/22615963add19ac6b6d715a97c8d477e8b95b7ea.png");
-	}
 
 	search(cityName) {
-		this.searchInput.setValue(cityName);
-		this.searchButton.click();
+		SearchForm.searchInput.setValue(cityName);
+		SearchForm.searchButton.click();
 	}
 
 	checkEqual (city){

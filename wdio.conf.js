@@ -15,7 +15,7 @@ exports.config = {
 	// Patterns to exclude.
 	exclude: [
 		
-		// 'path/to/excluded/files'
+		// './specs/Booking.Mobile.js'
 	],
 	//
 	// ============
@@ -50,8 +50,8 @@ exports.config = {
 		chromeOptions: {
 			args: ["headless", 
 			 	"disable-gpu", 
-			// 	"window-size=1024,768"]
-			]}
+				"window-size=1024,768"]
+			}
 
 	}],
 	//

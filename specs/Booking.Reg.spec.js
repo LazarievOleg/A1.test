@@ -6,10 +6,10 @@ require("chai").should();
 
 describe.skip("PositiveTestRegistration", () => {
 
-// before(() => {
-// 	RegistrationPage.open();
-// 	RegistrationPage.verifyOnPage();
-// });
+	before(() => {
+		RegistrationPage.open("/");
+		RegistrationPage.verifyOnPage();
+	});
 
 	it("Open site", () => {
 		RegistrationPage.verifyOnPage();
@@ -17,7 +17,6 @@ describe.skip("PositiveTestRegistration", () => {
 
 	it("Modal window open",() =>{
 		RegistrationPage.openModal();
-		
 	});
 
 	it("Positive registration and signout", () => {
@@ -31,8 +30,6 @@ describe.skip("PositiveTestRegistration", () => {
 		browser.click(".modal-wrapper .wl252-btn-done");
 		browser.element("span[header_name=\"Ваш аккаунт\"] .user_firstname .ge-no-yellow-bg").should.exist;
 		browser.click(".header-user-menu-link-s-logged-in");
-		browser.click("form.profile-menu__item--signout");
-			
+		browser.click("form.profile-menu__item--signout");	
 	});
-
 });

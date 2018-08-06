@@ -1,49 +1,26 @@
 import Page from "../page";
-
+import SearchForm from "../searchform";
 /*global browser*/
 
 require("chai").should();
 
 class SearchAppartment extends Page {
-	get searchInput    () {return browser.element("#ss");}
-	get searchButton () {return browser.element (".sb-searchbox__button");}
-	
-
-	verifyOnPage() {
-		let logoHref = browser.element("#logo_no_globe_new_logo").getAttribute("src");
-		logoHref.should.include("booking_logo_retina/22615963add19ac6b6d715a97c8d477e8b95b7ea.png");
-	}
 
 	search(hotelName) {
-		this.searchInput.setValue(hotelName);
-		this.searchButton.click();
+		SearchForm.searchInput.setValue(hotelName);
+		SearchForm.searchButton.click();
 	}
 
 	checkResult(elementId) {
 		browser.element(elementId).isVisible().should.be.true;
 	}
 
-	open() {
-		super.open("/");	
-	}
-
 	selectHotel(elementId) {
-		
 		let calendarDiv = browser.element(".sb-date-field__wrapper .c2-wrapper");
 		if(!calendarDiv.getAttribute("class").includes("c2-wrapper-s-hidden")) {
 			calendarDiv.element(".sb-searchbox__input").click();
 		}
 		browser.element(elementId).element(".sr_item_photo_link").click();
-	}
-
-	checkNewTab() {
-		let handles = browser.windowHandles().value;
-		handles.length.should.equal(2);
-		handles[0].should.equal(browser.getCurrentTabId());
-	}
-
-	pausePage(milliseconds) {
-		browser.pause(milliseconds);
 	}
 }
 
