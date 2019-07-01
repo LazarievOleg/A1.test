@@ -8,7 +8,9 @@ RUN apt-get update -qq && \
   -qq
 
 COPY . .
+RUN npm i -g node-gyp
 RUN yarn --frozen-lockfile 
+
 
 CMD yarn run lint
 # use lint instead tests, mate
