@@ -3,4 +3,4 @@ services:
   - docker
 
 script:
-- docker-compose up e2e-tests
+bash start_tests.sh
