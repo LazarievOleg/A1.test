@@ -11,3 +11,5 @@ else
 fi
 
 ./clean.sh
+
+exit $TEST_EXIT_CODE

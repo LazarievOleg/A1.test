@@ -9,4 +9,5 @@ node_js:
   - "8"
 
 script:
-  - ./start_tests.sh || travis_terminate 1;
+  - ./start_tests.sh
+  
