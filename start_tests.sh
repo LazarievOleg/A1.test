@@ -14,4 +14,4 @@ fi
 
 exit $TEST_EXIT_CODE
 
-# $TEST_EXIT_CODE  uses to say Travis that build with tests is failed
+# $TEST_EXIT_CODE  uses to say Travis that build with tests is failed or not
