@@ -5,9 +5,9 @@ node_js:
 before_install:
   - chmod +x ./start_tests.sh
   - chmod +x ./clean.sh
+  # give god  permission to sh files
 node_js:
   - "8"
-
+# wdio works and install stable only with 8 node, f*ck
 script:
   - ./start_tests.sh
-  

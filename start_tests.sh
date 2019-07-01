@@ -1,5 +1,5 @@
 #!/bin/bash
-docker-compose run e2e-test
+docker-compose run e2e-test  
 
 TEST_EXIT_CODE=$?
 
@@ -13,3 +13,5 @@ fi
 ./clean.sh
 
 exit $TEST_EXIT_CODE
+
+# $TEST_EXIT_CODE  uses to say Travis that build with tests is failed
