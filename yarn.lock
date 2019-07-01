@@ -2789,7 +2789,7 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-selenium-standalone@^6.15.4:
+selenium-standalone@^6.13.0:
   version "6.16.0"
   resolved "https://registry.yarnpkg.com/selenium-standalone/-/selenium-standalone-6.16.0.tgz#ffcf02665c58ff7a7472427ae819ba79c15967ac"
   integrity sha512-tl7HFH2FOxJD1is7Pzzsl0pY4vuePSdSWiJdPn+6ETBkpeJDiuzou8hBjvWYWpD+eIVcOrmy3L0R3GzkdHLzDw==
@@ -3201,7 +3201,7 @@ wdio-dot-reporter@~0.0.8:
   resolved "https://registry.yarnpkg.com/wdio-dot-reporter/-/wdio-dot-reporter-0.0.10.tgz#facfb7c9c5984149951f59cbc3cd0752101cf0e0"
   integrity sha512-A0TCk2JdZEn3M1DSG9YYbNRcGdx/YRw19lTiRpgwzH4qqWkO/oRDZRmi3Snn4L2j54KKTfPalBhlOtc8fojVgg==
 
-wdio-mocha-framework@0.6.4:
+wdio-mocha-framework@^0.6.4:
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/wdio-mocha-framework/-/wdio-mocha-framework-0.6.4.tgz#291b05b5f8735716023e1228e461f66ff2e7e1c9"
   integrity sha512-GZsXwoW60/fkkfqZJR/ZAdiALaM+hW+BbnTT9x214qPR4Pe5XeyYxhJNEdyf0dNI9625cMdkyZYaWoFHN5zDcA==
@@ -3210,7 +3210,7 @@ wdio-mocha-framework@0.6.4:
     mocha "^5.2.0"
     wdio-sync "0.7.3"
 
-wdio-screenshot@0.6.0:
+wdio-screenshot@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/wdio-screenshot/-/wdio-screenshot-0.6.0.tgz#fb326b1a6b9751a13c2cea511fd7062e05b73a4d"
   integrity sha1-+zJrGmuXUaE8LOpRH9cGLgW3Ok0=
@@ -3225,15 +3225,15 @@ wdio-screenshot@0.6.0:
     uuid "^3.0.0"
     which "^1.2.10"
 
-wdio-selenium-standalone-service@0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/wdio-selenium-standalone-service/-/wdio-selenium-standalone-service-0.0.12.tgz#f472d00d3a7800b2dbedb781bff0f5e726a21e9d"
-  integrity sha512-R8iUL30SkFfZictAG5wRofeCsHQ4bIucDtaArCQWZkUqS+DlGTStIk3TaIOCaX7dS7UW1YN/lJt9Vsn4Ekmoxg==
+wdio-selenium-standalone-service@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/wdio-selenium-standalone-service/-/wdio-selenium-standalone-service-0.0.10.tgz#cdb64d9a53fa3ea0ed3cf0ebf4fd3bdca93dcf05"
+  integrity sha512-PnpY6r8DcMwU2ZVk5y1d8vKhqOq6bXJILy/g5O5ncMpFaxIZcLkFA1u/11XBJwgzWXgUAXPPnIchkb+/t1dbXA==
   dependencies:
     fs-extra "^0.30.0"
-    selenium-standalone "^6.15.4"
+    selenium-standalone "^6.13.0"
 
-wdio-spec-reporter@0.1.5:
+wdio-spec-reporter@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/wdio-spec-reporter/-/wdio-spec-reporter-0.1.5.tgz#6d6f865deac6b36f96988c1204cc81099b75fc7e"
   integrity sha512-MqvgTow8hFwhFT47q67JwyJyeynKodGRQCxF7ijKPGfsaG1NLssbXYc0JhiL7SiAyxnQxII0UxzTCd3I6sEdkg==

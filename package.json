@@ -24,9 +24,9 @@
     "webdriverio": "4.13.1"
   },
   "dependencies": {
-    "wdio-mocha-framework": "0.6.4",
-    "wdio-screenshot": "0.6.0",
-    "wdio-selenium-standalone-service": "0.0.12",
-    "wdio-spec-reporter": "0.1.5"
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-screenshot": "^0.6.0",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-spec-reporter": "^0.1.5"
   }
 }
