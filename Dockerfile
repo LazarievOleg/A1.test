@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:8.15-slim
 
 RUN apt-get update -qq && \
   apt-get install -y \
@@ -8,7 +8,6 @@ RUN apt-get update -qq && \
   -qq
 
 COPY . .
-RUN npm i -g node-gyp
 RUN yarn --frozen-lockfile 
 
 
