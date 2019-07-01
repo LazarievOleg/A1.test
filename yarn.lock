@@ -3326,7 +3326,7 @@ wdio-screenshot@^0.6.0:
     uuid "^3.0.0"
     which "^1.2.10"
 
-wdio-selenium-standalone-service@0.0.10:
+wdio-selenium-standalone-service@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/wdio-selenium-standalone-service/-/wdio-selenium-standalone-service-0.0.10.tgz#cdb64d9a53fa3ea0ed3cf0ebf4fd3bdca93dcf05"
   integrity sha512-PnpY6r8DcMwU2ZVk5y1d8vKhqOq6bXJILy/g5O5ncMpFaxIZcLkFA1u/11XBJwgzWXgUAXPPnIchkb+/t1dbXA==
