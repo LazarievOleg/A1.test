@@ -12,4 +12,5 @@ RUN yarn global add fibers
 RUN yarn global add node-gyp
 RUN yarn --frozen-lockfile 
 
-CMD yarn run test
+CMD yarn run lint
+# use lint instead tests, mate
