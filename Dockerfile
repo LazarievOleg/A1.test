@@ -8,6 +8,7 @@ RUN apt-get update -qq && \
   -qq
 
 COPY . .
+RUN yarn global add fibers
 RUN yarn global add node-gyp
 RUN yarn --frozen-lockfile 
 
