@@ -11,5 +11,5 @@ COPY . .
 RUN yarn --frozen-lockfile 
 
 
-CMD yarn run lint
-# use lint instead tests, mate
+CMD yarn run test
+# use lint instead test, mate
