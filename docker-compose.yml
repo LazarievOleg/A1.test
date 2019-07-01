@@ -1,0 +1,45 @@
+version: '3.7'
+networks:
+  default:
+    external:
+      name: bridge
+
+services:
+  e2e-test:
+    container_name: e2e-test
+    depends_on:
+      - selenium-hub
+      - chrome
+    links:
+      - selenium-hub
+      - chrome
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: e2e-test
+    network_mode: bridge
+    ports:
+      - '5000:5000'
+    logging:
+        options:
+            max-size: '50m'
+
+  selenium-hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    network_mode: bridge
+    ports:
+    - 4444:4444
+
+  chrome:
+    image: selenium/node-chrome-debug:3.141.59-mercury 
+    container_name: chrome
+    depends_on:
+    - selenium-hub
+    links:
+    - selenium-hub:hub
+    network_mode: bridge
+    ports:
+    - 5900:5900
+    volumes:
+    - /dev/shm:/dev/shm # Mitigates the Chromium issue described at https://code.google.com/p/chromium/issues/detail?id=519952```

@@ -1,5 +1,10 @@
 exports.config = {
-    
+	
+	host: process.env.SELENIUM_HUB_PORT_4444_TCP_ADDR || '0.0.0.0',
+	port: 4444,
+	path: '/wd/hub',
+	
+
 	//
 	// ==================
 	// Specify Test Files
@@ -66,7 +71,7 @@ exports.config = {
 	sync: true,
 	//
 	// Level of logging verbosity: silent | verbose | command | data | result | error
-	logLevel: "verbose",
+	logLevel: "silent",
 	//
 	// Enables colors for log output.
 	coloredLogs: true,

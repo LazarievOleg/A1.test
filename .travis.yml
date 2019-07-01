@@ -1,9 +1,6 @@
 language: node_js
-node_js:
-  - node
-
-before_script:
-  - npm i
+services:
+  - docker
 
 script:
-  - npm run lint
+- docker-compose up e2e-tests
