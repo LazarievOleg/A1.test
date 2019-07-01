@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose up e2e-test
+docker-compose run e2e-test
