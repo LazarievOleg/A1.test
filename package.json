@@ -20,13 +20,13 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-react": "^7.10.0",
-    "webdriverio": "^4.13.1"
+    "eslint-plugin-react": "7.10.0",
+    "webdriverio": "4.13.1"
   },
   "dependencies": {
-    "wdio-mocha-framework": "^0.6.4",
-    "wdio-screenshot": "^0.6.0",
-    "wdio-selenium-standalone-service": "^0.0.12",
-    "wdio-spec-reporter": "^0.1.5"
+    "wdio-mocha-framework": "0.6.4",
+    "wdio-screenshot": "0.6.0",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "0.1.5"
   }
 }

@@ -1,6 +1,6 @@
 FROM node:lts-slim
 
 COPY . .
-RUN npm i 
+RUN yarn --frozen-lockfile 
 
-CMD npm run test
+CMD yarn run test
